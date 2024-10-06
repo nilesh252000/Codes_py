@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="loginController">
+    <h2>Login Page</h2>
+    <form ng-submit="login()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" ng-model="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" ng-model="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <div ng-show="message">{{ message }}</div>
+</body>
+</html>
